@@ -1,0 +1,11 @@
+| Port  | Service               | Protocol | Description                   | ELI5                                | Common Attack Vector       | Common Tools    | Importance |
+| ----- | --------------------- | -------- | ----------------------------- | ----------------------------------- | -------------------------- | --------------- | ---------- |
+| 161   | SNMP                  | UDP      | Network device management.    | Asking devices how they're feeling. | Default community strings. | snmpwalk        | ⭐⭐⭐⭐⭐      |
+| 162   | SNMP Trap             | UDP      | Receives alerts from devices. | Devices raising their hand.         | Spoofed traps.             | snmptrap        | ⭐⭐⭐        |
+| 514   | Syslog                | UDP      | Centralized logging.          | Everyone writing to one diary.      | Log flooding.              | logger, rsyslog | ⭐⭐⭐⭐       |
+| 5601  | Kibana                | TCP      | Elasticsearch dashboard.      | Searching the diary.                | Exposed dashboards.        | curl            | ⭐⭐⭐⭐       |
+| 9090  | Prometheus            | TCP      | Metrics collection.           | Health report for servers.          | Information disclosure.    | curl            | ⭐⭐⭐        |
+| 9200  | Elasticsearch         | TCP      | Search engine backend.        | Search engine for logs.             | Unauthenticated access.    | curl            | ⭐⭐⭐⭐⭐      |
+| 9300  | Elasticsearch Cluster | TCP      | Node communication.           | Servers talking together.           | Cluster compromise.        | curl            | ⭐⭐⭐        |
+| 10050 | Zabbix Agent          | TCP      | Monitoring agent.             | Health checker.                     | Agent exploitation.        | zabbix_get      | ⭐⭐⭐        |
+| 10051 | Zabbix Server         | TCP      | Monitoring server.            | Boss collecting reports.            | Unauthorized access.       | zabbix_sender   | ⭐⭐⭐        |
