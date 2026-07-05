@@ -1,0 +1,165 @@
+# Security Fundamentals
+
+This document covers three core information security concepts:
+
+- 🔺 CIA Triad
+- 🔑 AAA (Authentication, Authorization & Accounting)
+- 💾 Three States of Data
+
+---
+
+# 🔺 CIA Triad
+
+The **CIA Triad** is the foundation of information security. Every security control exists to protect one or more of these three principles.
+
+## CIA Principles
+
+| Principle | Definition | Goal | Real-world Example | Common Threats | Security Controls |
+|-----------|------------|------|--------------------|----------------|-------------------|
+| **Confidentiality** | Ensures information is accessible only to authorized users. | Prevent unauthorized disclosure. | Only HR can access employee salary records. | Data breaches, insider threats, credential theft, eavesdropping | Encryption, MFA, RBAC, VPN, Access Control Lists (ACLs) |
+| **Integrity** | Ensures data remains accurate, complete, and unaltered. | Prevent unauthorized modification. | Financial records cannot be changed without authorization. | Malware, SQL Injection, file tampering, ransomware | Hashing, Digital Signatures, Checksums, Version Control, File Integrity Monitoring (FIM) |
+| **Availability** | Ensures systems and data are available when needed. | Prevent service disruption. | Company website remains accessible 24/7. | DDoS attacks, hardware failure, ransomware, power outages | Backups, Redundancy, High Availability (HA), Load Balancers, Disaster Recovery |
+
+---
+
+## 💡 Easy Way to Remember
+
+| Principle | Think Of |
+|-----------|----------|
+| **Confidentiality** | 🔒 Keep secrets secret |
+| **Integrity** | ✔️ Keep data correct |
+| **Availability** | 🟢 Keep systems running |
+
+---
+
+## Example
+
+Imagine an **online banking application**.
+
+- 🔒 **Confidentiality** → Only the account owner should see their account balance.
+- ✔️ **Integrity** → No one should be able to modify transaction history.
+- 🟢 **Availability** → Customers should be able to access the banking website whenever they need.
+
+---
+
+# 🔑 AAA (Authentication, Authorization & Accounting)
+
+AAA defines **who you are**, **what you're allowed to do**, and **what you did**.
+
+## AAA Components
+
+| Component | Definition | Question Answered | Example | Common Technologies |
+|-----------|------------|-------------------|---------|---------------------|
+| **Authentication** | Verifies the identity of a user or system. | Who are you? | Logging in using username, password, MFA, or biometrics. | Kerberos, LDAP, RADIUS, TACACS+, OAuth, SAML |
+| **Authorization** | Determines what an authenticated user is allowed to access. | What are you allowed to do? | HR can view payroll, but interns cannot. | RBAC, ABAC, ACLs, IAM Policies |
+| **Accounting (Auditing)** | Records and tracks user activities. | What did you do? | Logging login times, accessed files, and executed commands. | Syslog, SIEM, Windows Event Logs, Audit Logs |
+
+---
+
+## 💡 Easy Way to Remember
+
+| AAA Component | Think Of |
+|--------------|----------|
+| **Authentication** | 👤 Who are you? |
+| **Authorization** | 🔑 What can you do? |
+| **Accounting** | 📝 What did you do? |
+
+---
+
+## Example
+
+An employee logs into the company VPN.
+
+### Authentication
+
+- Username
+- Password
+- Multi-Factor Authentication (MFA)
+
+### Authorization
+
+- ✅ Allowed to access the internal Git repository
+- ❌ Denied access to the HR database
+
+### Accounting
+
+- Login time recorded
+- IP address logged
+- Files accessed logged
+- Logout time recorded
+
+---
+
+# 💾 Three States of Data
+
+Data must be protected regardless of where it exists.
+
+## Data States
+
+| State | Definition | Example | Common Threats | Security Controls |
+|------|------------|---------|----------------|-------------------|
+| **Data at Rest** | Stored data that is not actively moving. | Hard drives, SSDs, databases, cloud storage, backups | Physical theft, ransomware, unauthorized access | Full Disk Encryption, Database Encryption, Access Controls, Backup Encryption |
+| **Data in Transit** | Data moving between devices or networks. | HTTPS, SSH, VPN, Emails | Man-in-the-Middle (MitM), Packet Sniffing, Session Hijacking | TLS/SSL, VPN, IPSec, SSH, Certificate Validation |
+| **Data in Use** | Data actively being processed in memory. | Running applications, RAM, CPU processing | Memory scraping, malware, code injection | Secure Enclaves, Endpoint Protection, Least Privilege, Memory Encryption |
+
+---
+
+## 💡 Easy Way to Remember
+
+| Data State | Think Of |
+|-----------|----------|
+| **Data at Rest** | 📦 Sitting on a shelf |
+| **Data in Transit** | 🚚 Travelling on the road |
+| **Data in Use** | ⚙️ Being worked on |
+
+---
+
+## Example
+
+Opening a PDF stored in OneDrive.
+
+| Stage | Data State |
+|--------|------------|
+| Before opening | 📦 Data at Rest |
+| Downloading the file | 🚚 Data in Transit |
+| Reading it in Adobe Reader | ⚙️ Data in Use |
+
+---
+
+# 🔄 Relationship Between CIA, AAA & Data States
+
+```text
+Data States
+│
+├── Data at Rest
+├── Data in Transit
+└── Data in Use
+          │
+          ▼
+      CIA Triad
+ ┌──────┼──────┐
+ ▼      ▼      ▼
+Conf. Integrity Availability
+          │
+          ▼
+          AAA
+ ┌──────┼──────┐
+ ▼      ▼      ▼
+Auth.  Author. Accounting
+```
+
+## Summary
+
+| Concept | Purpose | Focus |
+|----------|---------|-------|
+| 🔺 **CIA Triad** | Defines the security objectives. | What should be protected? |
+| 🔑 **AAA** | Controls access and accountability. | Who can access what, and what actions were performed? |
+| 💾 **Data States** | Identifies where data exists. | Where must security controls be applied? |
+
+---
+
+> **Remember**
+>
+> - **CIA** defines the **security goals**.
+> - **AAA** enforces **access control and accountability**.
+> - **Data States** describe **where data exists**, ensuring appropriate protections are applied throughout its lifecycle.
