@@ -1,0 +1,9 @@
+| Port | Service                 | Protocol | Description                           | ELI5                       | Common Attack Vector       | Common Tools         | Importance |
+| ---- | ----------------------- | -------- | ------------------------------------- | -------------------------- | -------------------------- | -------------------- | ---------- |
+| 2375 | Docker API              | TCP      | Unencrypted Docker control.           | Remote robot controller.   | Remote container takeover. | curl, docker         | ⭐⭐⭐⭐⭐      |
+| 2376 | Docker API TLS          | TCP      | Secure Docker API.                    | Locked robot controller.   | Weak TLS.                  | docker               | ⭐⭐⭐⭐       |
+| 5000 | Docker Registry / Flask | TCP      | Image registry or development server. | Warehouse for apps.        | Exposed registries.        | curl                 | ⭐⭐⭐        |
+| 6443 | Kubernetes API          | TCP      | Kubernetes control plane.             | Manager of many robots.    | Cluster takeover.          | kubectl, kube-hunter | ⭐⭐⭐⭐⭐      |
+| 8080 | HTTP Alternate          | TCP      | Alternative web service.              | Another website door.      | Web vulnerabilities.       | Burp Suite           | ⭐⭐⭐⭐       |
+| 8443 | HTTPS Alternate         | TCP      | Secure alternate web service.         | Secure side entrance.      | TLS/web vulnerabilities.   | Burp Suite           | ⭐⭐⭐⭐       |
+| 9000 | SonarQube               | TCP      | Code quality server.                  | Teacher checking homework. | Default credentials.       | curl                 | ⭐⭐⭐        |
