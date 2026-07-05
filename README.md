@@ -10,7 +10,7 @@ The goal of this repository is to build a strong foundational and advanced under
 * **Prepare** for industry-standard certifications.
 
 ## 🧑‍💻 Connect With Me
-* **LinkedIn:** [Your Name](https://www.linkedin.com/in/atharva-kulkarni-72a965215)
+* **LinkedIn:** [Atharva Kulkarni](https://www.linkedin.com/in/atharva-kulkarni-72a965215)
 
 ---
 *“The more you know, the more you realize you don't know.” — Let's keep learning!*
