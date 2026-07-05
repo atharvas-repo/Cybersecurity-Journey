@@ -1,0 +1,8 @@
+| Port  | Service             | Protocol | Description               | ELI5                              | Common Attack Vector         | Common Tools  | Importance |
+| ----- | ------------------- | -------- | ------------------------- | --------------------------------- | ---------------------------- | ------------- | ---------- |
+| 5672  | RabbitMQ            | TCP      | Message broker.           | Post office between applications. | Default credentials.         | rabbitmqctl   | ⭐⭐⭐        |
+| 15672 | RabbitMQ Management | TCP      | RabbitMQ Web UI.          | Post office control room.         | Default credentials.         | Browser, curl | ⭐⭐⭐        |
+| 1883  | MQTT                | TCP      | IoT messaging protocol.   | Devices passing notes.            | Unauthenticated brokers.     | mosquitto_sub | ⭐⭐⭐        |
+| 3260  | iSCSI               | TCP      | Storage over IP.          | Shared hard drive.                | Unauthorized storage access. | iscsiadm      | ⭐⭐⭐        |
+| 9418  | Git Protocol        | TCP      | Native Git communication. | Library of source code.           | Repository exposure.         | git           | ⭐⭐         |
+| 50051 | gRPC                | TCP      | Remote procedure calls.   | Apps talking efficiently.         | API abuse.                   | grpcurl       | ⭐⭐⭐        |
