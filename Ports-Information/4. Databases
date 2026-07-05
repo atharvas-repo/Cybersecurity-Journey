@@ -1,0 +1,8 @@
+| Port  | Service              | Protocol | Description          | ELI5                    | Common Attack Vector             | Common Tools     | Importance |
+| ----- | -------------------- | -------- | -------------------- | ----------------------- | -------------------------------- | ---------------- | ---------- |
+| 1433  | Microsoft SQL Server | TCP      | MS SQL database.     | Company notebook.       | SQL injection, weak credentials. | sqlcmd, Impacket | ⭐⭐⭐⭐       |
+| 1521  | Oracle               | TCP      | Oracle database.     | Large company notebook. | Weak passwords.                  | sqlplus          | ⭐⭐⭐        |
+| 3306  | MySQL                | TCP      | MySQL database.      | Website notebook.       | SQLi, weak credentials.          | mysql, sqlmap    | ⭐⭐⭐⭐⭐      |
+| 5432  | PostgreSQL           | TCP      | PostgreSQL database. | Advanced notebook.      | Weak credentials.                | psql             | ⭐⭐⭐⭐       |
+| 6379  | Redis                | TCP      | In-memory database.  | Fast notebook.          | Unauthenticated access, RCE.     | redis-cli        | ⭐⭐⭐⭐       |
+| 27017 | MongoDB              | TCP      | NoSQL database.      | Huge document cabinet.  | Unauthenticated access.          | mongo            | ⭐⭐⭐⭐⭐      |
