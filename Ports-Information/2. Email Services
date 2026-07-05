@@ -1,0 +1,9 @@
+| Port | Service         | Protocol | Description                      | ELI5                                      | Common Attack Vector  | Common Tools          | Importance |
+| ---- | --------------- | -------- | -------------------------------- | ----------------------------------------- | --------------------- | --------------------- | ---------- |
+| 25   | SMTP            | TCP      | Transfers email between servers. | Mail truck between post offices.          | Open relay, spoofing. | swaks, smtp-user-enum | ⭐⭐⭐⭐       |
+| 110  | POP3            | TCP      | Downloads emails.                | Taking letters home.                      | Credential theft.     | openssl, telnet       | ⭐⭐         |
+| 143  | IMAP            | TCP      | Reads emails from server.        | Reading letters without taking them home. | Credential attacks.   | openssl, telnet       | ⭐⭐         |
+| 465  | SMTPS           | TCP      | Encrypted SMTP.                  | Locked mail truck.                        | TLS misconfiguration. | openssl               | ⭐⭐         |
+| 587  | SMTP Submission | TCP      | Authenticated email sending.     | Authorized mailbox.                       | Credential abuse.     | swaks                 | ⭐⭐⭐        |
+| 993  | IMAPS           | TCP      | Secure IMAP.                     | Secure mailbox.                           | Weak TLS.             | openssl               | ⭐⭐         |
+| 995  | POP3S           | TCP      | Secure POP3.                     | Secure letter collection.                 | Weak TLS.             | openssl               | ⭐⭐         |
