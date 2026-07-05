@@ -1,0 +1,5 @@
+| Port | Service     | Protocol | Description                | ELI5                              | Common Attack Vector                     | Common Tools          | Importance |
+| ---- | ----------- | -------- | -------------------------- | --------------------------------- | ---------------------------------------- | --------------------- | ---------- |
+| 902  | VMware ESXi | TCP      | VMware management.         | Managing virtual computers.       | ESXi exploitation.                       | govc, nmap            | ⭐⭐⭐        |
+| 3389 | RDP         | TCP      | Remote Desktop Protocol.   | Using another PC from far away.   | Brute force, BlueKeep, credential theft. | xfreerdp, Hydra, Nmap | ⭐⭐⭐⭐⭐      |
+| 5900 | VNC         | TCP      | Virtual Network Computing. | Seeing another computer's screen. | Weak passwords.                          | vncviewer             | ⭐⭐⭐        |
